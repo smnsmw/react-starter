@@ -1,0 +1,8 @@
+{
+  "name": "react-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/smnsmw/react-starter.git",
+  "author": "denis.khaydarshin <denis.khaydarshin@gmail.com>",
+  "license": "MIT"
+}
