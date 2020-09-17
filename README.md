@@ -10,6 +10,7 @@ It should have
 4. Storybook (typescript sass support)
 5. Dev server with easy ability to mock server requests
 6. Jest
+7. Linter, code-formatter, pre-commit pre-push hooks
 
 
 Why not create-react-app?
