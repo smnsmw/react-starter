@@ -4,9 +4,10 @@ import { FC, useState } from "react";
 export const AnotherOne: FC<any> = () => {
     const [state, setState] = useState(5);
     return (
-        <div className={'another'} style={{border: '1px solid red', display: 'inline-block'}}>
+        <div className={'another-one'} style={{border: '1px solid red', display: 'block'}}>
             {state}
-            hello state unchanged, goo
+             <br/>
+             hello state unchanged, goo 3
             <button onClick={() => setState((s) => ++s)}>with red one</button>
         </div>
     )

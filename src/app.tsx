@@ -1,7 +1,7 @@
 import React, { FC, Fragment, useState } from 'react';
 import ReactDom from 'react-dom';
-import { Another } from './Another.tsx';
-import { AnotherOne } from './AnotherOne.tsx';
+import { Another } from './Another';
+import { AnotherOne } from './AnotherOne';
 
 export const App: FC<any> = () => {
     const [state, setState] = useState(0);
@@ -11,7 +11,7 @@ export const App: FC<any> = () => {
             <AnotherOne/>
             <br/>
             <span>coun {state}</span>
-            <div>Am root</div>
+            <div>Am root12</div>
             <button onClick={() => setState((s) => ++s)}>increse</button>
         </div>
     )

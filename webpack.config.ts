@@ -4,20 +4,16 @@ import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
-
 export const config = {
     mode: isDevelopment ? 'development' : 'production',
     entry: [
-        'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr',
+        'webpack-hot-middleware/client',
         './src/app.tsx',
     ],
     output: {
         filename: '[name].bundle.js',
         path: path.join(__dirname, 'dist'),
         publicPath: '/',
-    },
-    devServer: {
-        hot: true,
     },
     module: {
         rules: [
@@ -45,6 +41,10 @@ export const config = {
                 }
             }),
     ].filter(Boolean),
+
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
+    }
 }
 
 export default config;
