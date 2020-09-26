@@ -10,7 +10,7 @@ export const App: FC<any> = () => {
             <Another/>
             <AnotherOne/>
             <br/>
-            <span>coun {state}</span>
+            <span>count {state}</span>
             <div>Am root12</div>
             <button onClick={() => setState((s) => ++s)}>increse</button>
         </div>

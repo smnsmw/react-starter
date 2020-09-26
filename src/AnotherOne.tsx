@@ -7,7 +7,7 @@ export const AnotherOne: FC<any> = () => {
         <div className={'another-one'} style={{border: '1px solid red', display: 'block'}}>
             {state}
              <br/>
-             hello state unchanged, goo 3
+             hello state uncanged, goo
             <button onClick={() => setState((s) => ++s)}>with red one</button>
         </div>
     )

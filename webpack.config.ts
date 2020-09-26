@@ -3,11 +3,12 @@ import { HotModuleReplacementPlugin } from 'webpack';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
-
+const mode = isDevelopment ? 'development' : 'production'
+console.log('Build params', {isDevelopment}); // todo: replace with chalk
 export const config = {
-    mode: isDevelopment ? 'development' : 'production',
+    mode,
     entry: [
-        'webpack-hot-middleware/client',
+        'webpack-hot-middleware/client?reload=true',
         './src/app.tsx',
     ],
     output: {
@@ -29,6 +30,14 @@ export const config = {
                     ].filter(Boolean),
                   },
                 },
+              ],
+            },
+            {
+              test: /\.s[ac]ss$/i,
+              use: [
+                'style-loader',
+                'css-loader',
+                'sass-loader',
               ],
             },
         ]

@@ -6,7 +6,7 @@ export const Another: FC<any> = () => {
     return (
         <div className={'another'} style={{border: '1px solid gray', display: 'inline-block'}}>
             {state}
-            <button onClick={() => setState((s) => ++s)}>With gray, so 6</button>
+            <button onClick={() => setState((s) => ++s)}>With gay, md</button>
         </div>
     )
 }

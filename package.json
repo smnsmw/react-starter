@@ -6,7 +6,9 @@
   "author": "denis.khaydarshin <denis.khaydarshin@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node ./server/index.ts"
+    "start": "nodemon ./server/index.ts",
+    "build": "NODE_ENV=production webpack",
+    "build:dev": "webpack"
   },
   "dependencies": {
     "@babel/core": "^7.11.6",
